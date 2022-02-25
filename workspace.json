@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "nxtestinghector": "apps/nxtestinghector",
+    "nxtestinghector-e2e": "apps/nxtestinghector-e2e"
+  }
+}

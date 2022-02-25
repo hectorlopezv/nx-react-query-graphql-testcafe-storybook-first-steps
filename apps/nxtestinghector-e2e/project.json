@@ -1,0 +1,28 @@
+{
+  "root": "apps/nxtestinghector-e2e",
+  "sourceRoot": "apps/nxtestinghector-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/nxtestinghector-e2e/cypress.json",
+        "devServerTarget": "nxtestinghector:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "nxtestinghector:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/nxtestinghector-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["nxtestinghector"]
+}
