@@ -5,6 +5,7 @@
     "next",
     "next/core-web-vitals"
   ],
+
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {

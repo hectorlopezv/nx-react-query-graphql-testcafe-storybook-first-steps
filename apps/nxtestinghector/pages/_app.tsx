@@ -1,18 +1,17 @@
-import { AppProps } from 'next/app';
-import Head from 'next/head';
-import './styles.css';
+import "../styles/styles.scss";
+import type { AppProps } from 'next/app';
+import { ReactQueryDevtools } from 'react-query/devtools';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
-function CustomApp({ Component, pageProps }: AppProps) {
+// Create a client
+const queryClient = new QueryClient();
+function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <Head>
-        <title>Welcome to nxtestinghector!</title>
-      </Head>
-      <main className="app">
-        <Component {...pageProps} />
-      </main>
-    </>
+    <QueryClientProvider client={queryClient}>
+      <Component {...pageProps} />
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
   );
 }
 
-export default CustomApp;
+export default MyApp;

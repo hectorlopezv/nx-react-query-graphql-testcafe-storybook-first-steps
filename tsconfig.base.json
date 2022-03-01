@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@hectorui/post": ["libs/ui/post/src/index.ts"],
+      "@hectorui/posts": ["libs/ui/posts/src/index.ts"],
+      "@hectorui/ui": ["libs/ui/sharedcomponents/src/index.ts"],
+      "@testinghector": ["libs/ui/src/index.ts"],
+      "@testinghectornx/storybook": ["libs/storybook/src/index.ts"],
+      "@testinghectornx/storybooklib": ["libs/storybooklib/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

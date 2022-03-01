@@ -1,0 +1,44 @@
+mutation updatePostHector {
+  updatePost(id: 1,input: {title: "hecto title", body: "hector"} ) {
+    id
+title, body
+  }
+}
+
+
+query hectorandres{
+    post(id: 1) {
+      id
+      title
+      body,
+              user {
+        id, name, username, phone
+      }
+    }
+}
+
+
+query {
+    users{
+      data {
+        id, name, email,
+        website
+      }
+    }
+    
+}
+
+
+ query {
+	todos {
+    data {
+      id, title, completed,
+      user {
+        name, username, email
+      }
+    }
+  }
+
+}
+
+    

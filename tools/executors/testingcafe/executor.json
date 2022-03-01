@@ -1,0 +1,9 @@
+{
+    "executors": {
+      "testingcafe": {
+        "implementation": "./impl",
+        "schema": "./schema.json",
+        "description": "run e2e testingCafe"
+      }
+    }
+  }

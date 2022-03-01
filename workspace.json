@@ -2,6 +2,11 @@
   "version": 2,
   "projects": {
     "nxtestinghector": "apps/nxtestinghector",
-    "nxtestinghector-e2e": "apps/nxtestinghector-e2e"
+    "react-query-practical-guide": "apps/react-query-practical-guide",
+    "storybooklib": "libs/storybooklib",
+    "testcafetesting": "apps/testcafetesting",
+    "ui-post": "libs/ui/post",
+    "ui-posts": "libs/ui/posts",
+    "ui-sharedcomponents": "libs/ui/sharedcomponents"
   }
 }

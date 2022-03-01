@@ -1,0 +1,121 @@
+{
+  "colors": [
+    {
+      "id": 1,
+      "label": "red"
+    },
+    {
+      "id": 2,
+      "label": "blue"
+    },
+    { "id": 3, "label": "green" },
+    { "id": 4, "label": "yellow" },
+    { "id": 5, "label": "black" },
+    { "id": 6, "label": "white" },
+    { "id": 7, "label": "orange" },
+    { "id": 8, "label": "purple" }
+  ],
+  "users": [
+    {
+      "id": "hectorvmlopez@gmail.com",
+      "channelId": "reactQueryTesting"
+    }
+  ],
+  "channels": [
+    {
+      "id": "reactQueryTesting",
+      "courses": ["react", "vue", "angular"]
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "name": "Chandler Bing"
+    },
+    {
+      "id": 2,
+      "name": "Hector Lopez"
+    },
+    {
+      "id": 3,
+      "name": "Pecas Antonia"
+    }
+  ],
+  "superheroes": [
+    {
+      "id": 1,
+      "name": "Batman",
+      "alterEgo": "Bruce Wayne"
+    },
+    {
+      "id": 2,
+      "name": "Superman",
+      "alterEgo": "Clart Kent"
+    },
+    {
+      "id": 3,
+      "name": "Wonder Woman",
+      "alterEgo": "Princess Diana"
+    },
+    {
+      "id": 34,
+      "name": "Hector Lopez 34",
+      "alterEgo": "El Pibe 34"
+    },
+    {
+      "id": 64,
+      "name": "Hector Lopez 64",
+      "alterEgo": "El Pibe 64"
+    },
+    {
+      "id": 47,
+      "name": "Hector Lopez 47",
+      "alterEgo": "El Pibe 47"
+    },
+    {
+      "id": 70,
+      "name": "Hector Lopez 70",
+      "alterEgo": "El Pibe 70"
+    },
+    {
+      "id": 98,
+      "name": "Hector Lopez 98",
+      "alterEgo": "El Pibe 98"
+    },
+    {
+      "id": 52,
+      "name": "Hector Lopez 52",
+      "alterEgo": "El Pibe 52"
+    },
+    {
+      "id": 59,
+      "name": "Hector Lopez 59",
+      "alterEgo": "El Pibe 59"
+    },
+    {
+      "id": 97,
+      "name": "Hector Lopez 97",
+      "alterEgo": "El Pibe 97"
+    },
+    {
+      "id": 72,
+      "name": "Hector Lopez 72",
+      "alterEgo": "El Pibe 72"
+    },
+    {
+      "id": 20,
+      "name": "Hector Lopez 20",
+      "alterEgo": "El Pibe 20"
+    },
+    {
+      "id": 43,
+      "name": "Hector Lopez 43",
+      "alterEgo": "El Pibe 43"
+    },
+    {
+      "id": 92,
+      "name": "Hector Lopez 92",
+      "alterEgo": "El Pibe 92"
+    }
+  ]
+}

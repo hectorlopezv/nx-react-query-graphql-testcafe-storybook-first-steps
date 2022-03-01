@@ -1,0 +1,41 @@
+{
+  "root": "libs/ui/sharedcomponents",
+  "sourceRoot": "libs/ui/sharedcomponents/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ui/sharedcomponents",
+        "tsConfig": "libs/ui/sharedcomponents/tsconfig.lib.json",
+        "project": "libs/ui/sharedcomponents/package.json",
+        "entryFile": "libs/ui/sharedcomponents/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/ui/sharedcomponents/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ui/sharedcomponents/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    }
+  }
+}

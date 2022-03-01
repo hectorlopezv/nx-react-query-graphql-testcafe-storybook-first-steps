@@ -1,0 +1,21 @@
+{
+  "root": "apps/testcafetesting",
+  "sourceRoot": "apps/testcafetesting/src",
+  "projectType": "application",
+  "targets": {
+    "echo": {
+      "executor": "./tools/executors/echo:echo",
+      "options": {
+        "textToEcho": "Hello World"
+      }
+    },
+    "testingcafe": {
+      "executor": "./tools/executors/testingcafe:testingcafe",
+      "options": {
+        "message": "papito",
+        "browser": "chrome"
+      }
+    }
+  },
+  "tags": []
+}

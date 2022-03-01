@@ -1,0 +1,75 @@
+{
+  "root": "apps/react-query-practical-guide",
+  "sourceRoot": "apps/react-query-practical-guide/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/react-query-practical-guide",
+        "index": "apps/react-query-practical-guide/src/index.html",
+        "baseHref": "/",
+        "main": "apps/react-query-practical-guide/src/main.tsx",
+        "polyfills": "apps/react-query-practical-guide/src/polyfills.ts",
+        "tsConfig": "apps/react-query-practical-guide/tsconfig.app.json",
+        "assets": [
+          "apps/react-query-practical-guide/src/favicon.ico",
+          "apps/react-query-practical-guide/src/assets"
+        ],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/react-query-practical-guide/src/environments/environment.ts",
+              "with": "apps/react-query-practical-guide/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "react-query-practical-guide:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "react-query-practical-guide:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/react-query-practical-guide/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/react-query-practical-guide"],
+      "options": {
+        "jestConfig": "apps/react-query-practical-guide/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

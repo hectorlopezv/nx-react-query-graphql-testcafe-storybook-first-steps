@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "type": "object",
+  "cli": "nx",
+  "properties": {
+    "message": {
+      "type": "string",
+      "description": "papito to display"
+    },
+    "browser": {
+      "type": "string",
+      "description": "browser to execute chrome, firefox, ie"
+    }
+  }
+}
