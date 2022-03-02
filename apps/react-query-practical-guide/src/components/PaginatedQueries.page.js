@@ -12,7 +12,7 @@ export const PaginatedQueriesPage = () => {
     ['colors', pageNumber],
     () => fetchColors(pageNumber),
     {
-      keepPreviousData: true,
+      keepPreviousData: true, //show this when the data is loading
     }
   );
 

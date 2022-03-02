@@ -1,12 +1,12 @@
-import { useQuery } from 'react-query';
+import { useQuery, useMutation, useQueryClient } from 'react-query';
 import { useState } from 'react';
-import axios from 'axios';
+import { request } from '../src/utils/axios-utils';
 function randomIntFromInterval(min, max) {
   // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 const fetchSuperHeroes = () => {
-  return axios.get('http://localhost:4000/superheroes');
+  return request({ url: '/superheroes' });
 };
 //Flags
 //Fresh
@@ -22,11 +22,11 @@ export const useSuperHerosData = () => {
       setRefetchInterval(false);
     }
     const randomNumber = randomIntFromInterval(15, 100);
-    axios.post('http://localhost:4000/superheroes', {
+    /*     axios.post('http://localhost:4000/superheroes', {
       id: randomNumber,
       name: `Hector Lopez ${randomNumber}`,
       alterEgo: `El Pibe ${randomNumber}`,
-    });
+    }); */
   };
   const onError = (error) => {
     console.log('Error after data fetching', error);
@@ -49,3 +49,48 @@ export const useSuperHerosData = () => {
     staleTime: 0, // no aditional background request in this timestamp
   });
 };
+
+const addSuperHero = (hero) => {
+  return request({ url: '/superheroes', method: 'post', data: hero });
+};
+export const useAddSuperHeroData = () => {
+  const queryClient = useQueryClient();
+  return useMutation(addSuperHero, {
+    retry: 3,
+    onMutate: async (newHero) => {
+      //cancel any queries going on
+      await queryClient.cancelQueries('super-heroes');
+      const previousHeroData = queryClient.getQueryData('super-heroes'); //update cache on what is gonna be expected from SERVER
+      queryClient.setQueryData('super-heroes', (oldQueryData) => {
+        return {
+          ...oldQueryData,
+          data: [
+            ...oldQueryData.data,
+            { ...newHero, id: oldQueryData?.data?.length + 1 },
+          ],
+        };
+      });
+
+      return {
+        previousHeroData, //RollBack if Error is Encounter
+      };
+    },
+    onError: (_error, _hero, context) => {
+      //RollBack if neccesarry
+      queryClient.setQueryData('super-heroes', context.previousHeroData);
+    },
+    onSettled: () => {
+      //FINALLY
+      queryClient.invalidateQueries('super-heroes'); //INVALIDATE QUERY SO
+      //CACHE can be in sync WITH SERVER STATE
+    },
+    /*     onSuccess: (data) => {
+      queryClient.setQueryData('super-heroes', (oldQueryData) => {
+        return { ...oldQueryData, data: [...oldQueryData.data, data.data] };
+      });
+      // queryClient.invalidateQueries('super-heroes');
+    }, */
+  });
+};
+//optimitic updated...updated cache before doing a MUTATION
+// Under the ASUMPTION nothing goes Wrong(DB IS NOT UPDATED)

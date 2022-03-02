@@ -8,12 +8,30 @@
       "id": 2,
       "label": "blue"
     },
-    { "id": 3, "label": "green" },
-    { "id": 4, "label": "yellow" },
-    { "id": 5, "label": "black" },
-    { "id": 6, "label": "white" },
-    { "id": 7, "label": "orange" },
-    { "id": 8, "label": "purple" }
+    {
+      "id": 3,
+      "label": "green"
+    },
+    {
+      "id": 4,
+      "label": "yellow"
+    },
+    {
+      "id": 5,
+      "label": "black"
+    },
+    {
+      "id": 6,
+      "label": "white"
+    },
+    {
+      "id": 7,
+      "label": "orange"
+    },
+    {
+      "id": 8,
+      "label": "purple"
+    }
   ],
   "users": [
     {
@@ -24,7 +42,11 @@
   "channels": [
     {
       "id": "reactQueryTesting",
-      "courses": ["react", "vue", "angular"]
+      "courses": [
+        "react",
+        "vue",
+        "angular"
+      ]
     }
   ],
   "friends": [
@@ -58,64 +80,29 @@
       "alterEgo": "Princess Diana"
     },
     {
-      "id": 34,
-      "name": "Hector Lopez 34",
-      "alterEgo": "El Pibe 34"
+      "name": "dsad",
+      "alterEgo": "dsads",
+      "id": 4
     },
     {
-      "id": 64,
-      "name": "Hector Lopez 64",
-      "alterEgo": "El Pibe 64"
+      "name": "dsadas",
+      "alterEgo": "dsdsdd",
+      "id": 5
     },
     {
-      "id": 47,
-      "name": "Hector Lopez 47",
-      "alterEgo": "El Pibe 47"
+      "name": "aqueman",
+      "alterEgo": "beb",
+      "id": 6
     },
     {
-      "id": 70,
-      "name": "Hector Lopez 70",
-      "alterEgo": "El Pibe 70"
+      "name": "HECTOR",
+      "alterEgo": "beb",
+      "id": 7
     },
     {
-      "id": 98,
-      "name": "Hector Lopez 98",
-      "alterEgo": "El Pibe 98"
-    },
-    {
-      "id": 52,
-      "name": "Hector Lopez 52",
-      "alterEgo": "El Pibe 52"
-    },
-    {
-      "id": 59,
-      "name": "Hector Lopez 59",
-      "alterEgo": "El Pibe 59"
-    },
-    {
-      "id": 97,
-      "name": "Hector Lopez 97",
-      "alterEgo": "El Pibe 97"
-    },
-    {
-      "id": 72,
-      "name": "Hector Lopez 72",
-      "alterEgo": "El Pibe 72"
-    },
-    {
-      "id": 20,
-      "name": "Hector Lopez 20",
-      "alterEgo": "El Pibe 20"
-    },
-    {
-      "id": 43,
-      "name": "Hector Lopez 43",
-      "alterEgo": "El Pibe 43"
-    },
-    {
-      "id": 92,
-      "name": "Hector Lopez 92",
-      "alterEgo": "El Pibe 92"
+      "name": "principe",
+      "alterEgo": "beb",
+      "id": 8
     }
   ]
 }
